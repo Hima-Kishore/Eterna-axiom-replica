@@ -16,7 +16,7 @@ interface TokenInfoProps {
 
 export const TokenInfo = ({ name, symbol, timeAgo, badges }: TokenInfoProps) => {
     return (
-        <div className="flex-1 min-w-0 flex flex-col gap-0.5">
+        <div className="flex-1 min-w-0 flex flex-col gap-1">
             <div className="flex items-center gap-1.5 pt-0.5">
                 <span className="text-text-primary font-bold text-sm truncate leading-none">{symbol}</span>
                 <span className="text-text-tertiary text-xs truncate leading-none">{name}</span>
@@ -27,11 +27,11 @@ export const TokenInfo = ({ name, symbol, timeAgo, badges }: TokenInfoProps) => 
 
             <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
                 {badges.map((badge, i) => (
-                    <TokenBadge
-                        key={i}
-                        label={badge.label}
-                        variant={badge.type}
-                        icon={badge.icon}
+                    <TokenBadge 
+                    key={i} 
+                    label={badge.label} 
+                    variant={badge.type} 
+                    icon={badge.icon} 
                     />
                 ))}
             </div>

@@ -1,30 +1,33 @@
-import { TokenCard } from "@/components/molecules/TokenCard";
-import { ChefHat, Target, Ghost, FlaskConical, User } from "lucide-react";
+import { PulseColumn } from "@/components/organisms/PulseColumn";
+import { generateBatch } from "@/lib/mock-data";
 
 export default function Home() {
+  const newPairs = generateBatch(12);
+  const finalStretch = generateBatch(12);
+  const migrated = generateBatch(12);
+
   return (
-    <main className="min-h-screen bg-background p-8 flex justify-center">
-      {/* Simulating the column width (approx 400px based on desktop view) */}
-      <div className="w-[450px]">
-        <h1 className="text-white mb-4">Component Test</h1>
-        
-        <TokenCard 
-          name="PORNHUB OFFICIAL"
-          symbol="PORNHUB"
-          marketCap="$46.1K"
-          volume="$11K"
-          timeAgo="0s"
-          txns={105}
-          buyAmount="0 SOL"
-          badges={[
-            { type: "decrease", label: "67%", icon: <User className="w-3 h-3" /> },
-            { type: "decrease", label: "66% 1m", icon: <ChefHat className="w-3 h-3" /> },
-            { type: "decrease", label: "66%", icon: <Target className="w-3 h-3" /> },
-            { type: "increase", label: "0%", icon: <Ghost className="w-3 h-3" /> },
-            { type: "increase", label: "0%", icon: <FlaskConical className="w-3 h-3" /> },
-          ]}
-          statusColor="border-yellow-500" // Try 'border-status-increase' (Green) or 'border-status-decrease' (Red) too!
-        />
+    <main className="min-h-screen bg-background text-white flex flex-col overflow-hidden">
+      {/* Header Placeholder */}
+      <header className="h-14 flex items-center px-6 shrink-0 bg-background z-20">
+        <h1 className="font-bold text-xl text-text-primary mr-8">Pulse</h1>
+        {/* add the Mobile Tab Switcher */}
+      </header>
+
+      {/* The Main 3-Column Grid */}
+      <div className="flex-1 overflow-hidden border-2 border-white/5 relative rounded-md">
+        <div className="flex h-full border-1 border-white/5 rounded-md overflow-hidden">
+          
+          {/* Column 1: Visible on Mobile, Tablet, Desktop */}
+          <PulseColumn title="New Pairs" tokens={newPairs} />
+
+          {/* Column 2: Hidden on Mobile, Visible on Tablet+ */}
+          <PulseColumn title="Final Stretch" tokens={finalStretch} className="hidden md:flex" />
+
+          {/* Column 3: Hidden on Tablet, Visible on Desktop+ */}
+          <PulseColumn title="Migrated" tokens={migrated} className="hidden lg:flex" />
+
+        </div>
       </div>
     </main>
   );

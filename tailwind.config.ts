@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         // The Main Page Background (#06070B)
         background: "#06070B",
+        "surface-dark": "#101114",
         
         // Card Backgrounds (Derived from bg-secondary & tertiary)
         card: {

@@ -25,7 +25,7 @@ export const TokenCard = ({
   name, symbol, marketCap, volume, timeAgo, buyAmount, badges, statusColor 
 }: TokenCardProps) => {
   return (
-    <div className="flex gap-2 p-2 bg-card hover:bg-card-hover border border-card-border rounded-lg transition-colors group cursor-pointer w-full max-w-[480px]">
+    <div className="flex gap-3 px-2 py-3 border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full">
       
         {/* SECTION 1: Left (Image) */}
         <TokenLogo name={name} statusColor={statusColor}/>

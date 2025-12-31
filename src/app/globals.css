@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: #06070B;
+  background-color: #050505;
   color: #FCFCFC;
 }
 
@@ -13,6 +13,9 @@ body {
   /* Premium Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Custom Scrollbar to match the Dark Theme */

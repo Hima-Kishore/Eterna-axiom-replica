@@ -24,7 +24,6 @@ export const TokenMetrics = ({ marketCap, volume, buyAmount }: TokenMetricsProps
             <div className="flex items-center justify-end gap-1.5 w-full my-1">
                 <div className="flex items-center gap-0.5">
                     <span className="text-[10px] text-text-tertiary font-bold">F</span>
-                    {/* Used Zap as placeholder for Sol icon */}
                     <Zap className="w-2 h-2 text-text-tertiary" /> 
                     <span className="text-[10px] text-text-tertiary">0.036</span>
                 </div>
