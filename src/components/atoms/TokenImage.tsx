@@ -1,18 +1,22 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 interface TokenImageProps {
   src?: string;
   alt: string;
+  borderColor?: string; // New prop for the dynamic border
 }
 
-export const TokenImage = ({ src, alt }: TokenImageProps) => {
+export const TokenImage = ({ src, alt, borderColor = "border-card-border" }: TokenImageProps) => {
   return (
-    <div className="relative w-10 h-10 rounded-md overflow-hidden bg-card-hover border border-card-border shrink-0">
-      {/* Fallback if no image is provided */}
+    <div className={cn(
+      "relative w-[78px] h-[78px] rounded-md overflow-hidden border-2 shrink-0 p-0.5 bg-card", // Increased size to w-12/h-12
+      borderColor // Dynamic class injection
+    )}>
       <img 
-        src={src || "https://placehold.co/40x40/18181A/FFF?text=?"} 
+        src={"images/pornHubLogo.webp"} 
         alt={alt}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-md"
       />
     </div>
   );
