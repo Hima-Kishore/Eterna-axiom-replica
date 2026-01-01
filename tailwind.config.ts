@@ -29,15 +29,15 @@ const config: Config = {
 
         // Brand Colors
         brand: {
-          blue: "#526FFF",       // --primary-color (The main Action Blue)
-          blueHover: "#6683FF",  // --primary-color-hover
+          primary: "#526FFF", 
+          primaryHover: "#6683FF", 
         },
 
         // Status Colors (The "Pulse" Indicators)
         status: {
-          increase: "#2FE3AC",      // --increase (Green)
+          increase: "#22C55E",      // --increase (Green)
           increaseHover: "#5BE7BD", // --increase-hover
-          decrease: "#EC397A",      // --decrease (Red)
+          decrease: "#EF4444",      // --decrease (Red)
           decreaseHover: "#F8649A", // --decrease-hover
         }
       },

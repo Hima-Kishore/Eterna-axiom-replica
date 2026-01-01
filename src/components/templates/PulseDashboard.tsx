@@ -6,6 +6,8 @@ import { RootState } from "@/lib/store";
 import { PulseColumn } from "@/components/organisms/PulseColumn";
 import { useTokenSocket } from "@/hooks/useTokenSocket";
 import { initializeMockData } from "@/lib/features/pulseSlice";
+import { BuyModal } from "@/components/molecules/BuyModal";
+import { TokenData } from "@/types";
 import { cn } from "@/lib/utils";
 
 type Tab = "newPairs" | "finalStretch" | "migrated";
@@ -13,6 +15,13 @@ type Tab = "newPairs" | "finalStretch" | "migrated";
 export const PulseDashboard = () => {
   const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState<Tab>("newPairs");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedToken, setSelectedToken] = useState<TokenData | null>(null);
+
+  const handleBuy = (token: TokenData) => {
+    setSelectedToken(token);
+    setIsModalOpen(true);
+  };
   
   useTokenSocket();
 
@@ -65,6 +74,7 @@ export const PulseDashboard = () => {
                 "flex",
                 activeTab !== "newPairs" && "hidden md:flex"
             )}
+            onTokenBuy={handleBuy}
           />
           
           {/* COLUMN 2: Final Stretch */}
@@ -75,6 +85,7 @@ export const PulseDashboard = () => {
                 "hidden md:flex",
                 activeTab === "finalStretch" && "flex"
             )}
+            onTokenBuy={handleBuy}
           />
           
           {/* COLUMN 3: Migrated */}
@@ -85,10 +96,16 @@ export const PulseDashboard = () => {
                 "hidden md:flex", 
                 activeTab === "migrated" && "flex"
             )}
+            onTokenBuy={handleBuy}
           />
 
         </div>
       </div>
+      <BuyModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        tokenSymbol={selectedToken?.symbol || "TOKEN"} 
+      />
     </div>
   );
 };

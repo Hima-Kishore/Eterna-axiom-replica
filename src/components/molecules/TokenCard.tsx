@@ -19,10 +19,11 @@ export interface TokenCardProps {
     label: string;
     icon?: React.ReactNode;
   }[];
+  onBuyClick?: () => void;
 }
 
 export const TokenCard = memo(({ 
-  name, symbol, marketCap, volume, timeAgo, buyAmount, badges, statusColor 
+  name, symbol, marketCap, volume, timeAgo, buyAmount, badges, statusColor, onBuyClick
   }: TokenCardProps) => {
 
   const [flashClass, setFlashClass] = useState("");
@@ -50,21 +51,19 @@ export const TokenCard = memo(({
 
   return (
     <div className={cn(
-      "flex gap-3 px-2 py-3 border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full",
-      "sweep-effect",
-      flashClass
+      "sweep-effect", flashClass, "flex gap-3 px-2 py-3 border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full"
     )}>
       
-        <div className="relative z-10 flex gap-3 w-full">
-            {/* SECTION 1: Left (Image) */}
-            <TokenLogo name={name} statusColor={statusColor}/>
+      <div className="relative z-10 flex gap-3 w-full">
+          {/* SECTION 1: Left (Image) */}
+          <TokenLogo name={name} statusColor={statusColor}/>
 
-            {/* SECTION 2: Center (Info) */}
-            <TokenInfo name={name} symbol={symbol} timeAgo={timeAgo} badges={badges} />
+          {/* SECTION 2: Center (Info) */}
+          <TokenInfo name={name} symbol={symbol} timeAgo={timeAgo} badges={badges} />
 
-            {/* SECTION 3: Right (Metrics) */}
-            <TokenMetrics marketCap={marketCap} volume={volume} buyAmount={buyAmount}/>
-        </div>
+          {/* SECTION 3: Right (Metrics) */}
+          <TokenMetrics marketCap={marketCap} volume={volume} buyAmount={buyAmount} onBuy={onBuyClick}/>
+      </div>
     </div>
   );
 });
