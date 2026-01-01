@@ -10,7 +10,6 @@
 body {
   background-color: #06070B;
   color: #FCFCFC;
-  /* Premium Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -32,4 +31,54 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #2A2A2E; 
+}
+
+@keyframes sweepAnimation {
+  0% {
+    transform: translateX(-150%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(500%) skewX(-15deg);
+  }
+}
+
+.sweep-effect {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sweep-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 35%;
+  height: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-150%) skewX(-15deg);
+  will-change: transform; 
+}
+
+.sweep-green::after {
+  background: linear-gradient(
+    to right, 
+    transparent 0%, 
+    rgba(34, 197, 94, 0.2) 50%,
+    transparent 100%
+  );
+  opacity: 1;
+  animation: sweepAnimation 2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.sweep-red::after {
+  background: linear-gradient(
+    to right, 
+    transparent 0%, 
+    rgba(239, 68, 68, 0.2) 50%,
+    transparent 100%
+  );
+  opacity: 1;
+  animation: sweepAnimation 2s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
