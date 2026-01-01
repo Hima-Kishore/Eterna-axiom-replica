@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, memo } from "react";
 import { TokenLogo } from "./TokenLogo";
 import { TokenInfo } from "./TokenInfo";
 import { TokenMetrics } from "./TokenMetrics";
@@ -21,9 +21,9 @@ export interface TokenCardProps {
   }[];
 }
 
-export const TokenCard = ({ 
+export const TokenCard = memo(({ 
   name, symbol, marketCap, volume, timeAgo, buyAmount, badges, statusColor 
-}: TokenCardProps) => {
+  }: TokenCardProps) => {
 
   const [flashClass, setFlashClass] = useState("");
   const prevPriceRef = useRef(marketCap);
@@ -67,4 +67,6 @@ export const TokenCard = ({
         </div>
     </div>
   );
-};
+});
+
+TokenCard.displayName = "TokenCard";
