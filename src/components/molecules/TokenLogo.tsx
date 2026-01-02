@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 import { TokenImage } from "../atoms/TokenImage";
 
 interface TokenLogoProps {
@@ -11,8 +12,11 @@ export const TokenLogo = ({ name, statusColor }: TokenLogoProps) => {
       <div className="flex flex-col gap-1 items-center w-[78px] shrink-0"> 
         <div className="relative">
             <TokenImage alt={name} borderColor={statusColor || "border-card-border"} />
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-yellow-500 rounded-full border-2 border-background flex items-center justify-center">
-                <span className="text-[8px] text-black font-bold">💊</span>
+            <div className={cn(
+                  "absolute -bottom-1 -right-1 w-4 h-4 bg-black rounded-full border border-background flex items-center justify-center", // Increased size to w-12/h-12
+                  statusColor
+                )}>
+                <span className="text-[8px] text-{statusColor} font-bold">💊</span>
             </div>
         </div>
         <span className="text-xxs text-text-tertiary truncate max-w-[78px] text-center">CjcT...hHFv</span>
