@@ -45,10 +45,21 @@ export const PulseDashboard = () => {
       {/* MOBILE HEADER (Visible only on small screens) */}
       <MobileNavbar activeTab={activeTab} onTabChange={setActiveTab}/>
 
-      <div className="flex-1 overflow-hidden border-4 border-white/5 relative rounded-lg">
+      <div className="flex-1 overflow-hidden border-2 border-white/5 relative rounded-md">
         <div className="flex h-full rounded-md">
           
-          {/* COLUMN 1: New Pairs */}
+          {/* COLUMN 1: Final Stretch */}
+          <PulseColumn 
+            title="Final Stretch" 
+            tokens={finalStretch} 
+            className={cn(
+                "hidden md:flex",
+                activeTab === "finalStretch" && "flex"
+            )}
+            onTokenBuy={handleBuy}
+          />
+
+          {/* COLUMN 2: New Pairs */}
           <PulseColumn 
             title="New Pairs" 
             tokens={newPairs} 
@@ -59,16 +70,6 @@ export const PulseDashboard = () => {
             onTokenBuy={handleBuy}
           />
           
-          {/* COLUMN 2: Final Stretch */}
-          <PulseColumn 
-            title="Final Stretch" 
-            tokens={finalStretch} 
-            className={cn(
-                "hidden md:flex",
-                activeTab === "finalStretch" && "flex"
-            )}
-            onTokenBuy={handleBuy}
-          />
           
           {/* COLUMN 3: Migrated */}
           <PulseColumn 

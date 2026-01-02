@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef, memo } from "react";
 import { TokenLogo } from "./TokenLogo";
 import { TokenInfo } from "./TokenInfo";
 import { TokenMetrics } from "./TokenMetrics";
+import { BondingCard } from "./BondingCard";
 import { cn } from "@/lib/utils";
 
 export interface TokenCardProps {
@@ -50,21 +51,23 @@ export const TokenCard = memo(({
   }, [marketCap]);
 
   return (
-    <div className={cn(
-      "sweep-effect", flashClass, "flex gap-3 px-2 py-3 border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full"
-    )}>
-      
-      <div className="relative z-10 flex gap-3 w-full">
-          {/* SECTION 1: Left (Image) */}
-          <TokenLogo name={name} statusColor={statusColor}/>
+    <BondingCard marketCap={marketCap}>
+      <div className={cn(
+        "sweep-effect", flashClass, "flex gap-3 px-2 py-3 border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full"
+      )}>
+        
+        <div className="relative z-10 flex gap-3 w-full">
+            {/* SECTION 1: Left (Image) */}
+            <TokenLogo name={name} statusColor={statusColor}/>
 
-          {/* SECTION 2: Center (Info) */}
-          <TokenInfo name={name} symbol={symbol} timeAgo={timeAgo} badges={badges} />
+            {/* SECTION 2: Center (Info) */}
+            <TokenInfo name={name} symbol={symbol} timeAgo={timeAgo} badges={badges} />
 
-          {/* SECTION 3: Right (Metrics) */}
-          <TokenMetrics marketCap={marketCap} volume={volume} buyAmount={buyAmount} onBuy={onBuyClick}/>
+            {/* SECTION 3: Right (Metrics) */}
+            <TokenMetrics marketCap={marketCap} volume={volume} buyAmount={buyAmount} onBuy={onBuyClick}/>
+        </div>
       </div>
-    </div>
+    </BondingCard>
   );
 });
 

@@ -1,18 +1,42 @@
 import React from 'react';
-import { SlidersHorizontal, ArrowUpDown } from 'lucide-react';
+import { SlidersHorizontal, Zap, Layers } from 'lucide-react';
 
 
 export const TokenColumnHeader = ({ title }: { title: string }) => {
     return (
-        <div className="flex items-center justify-between px-4 py-3 border-b-2 border-white/5 mb-0 bg-surface-dark sticky top-0 z-10">
-            <h2 className="text-sm font-bold text-text-primary">{title}</h2>
-            <div className="flex gap-2">
-                <div className="p-1.5 hover:bg-white/5 rounded cursor-pointer transition-colors">
-                    <ArrowUpDown className="w-3 h-3 text-text-tertiary" />
+        <div className="flex items-center justify-between px-3 py-2 border-b border-white/5 shrink-0 bg-background z-10 h-14">
+
+            <h2 className="text-[18px] font-[500] text-white">{title}</h2>
+
+            <div className="flex items-center gap-4">
+
+                <div className="flex items-center bg-[#0b0c12] rounded-full border border-white/10 h-8 px-1 ">
+
+                    <div className="flex items-center justify-between gap-6 px-2">
+                        <div className="flex items-center gap-1">
+                            <Zap className="w-3 h-3 text-text-tertiary fill-current" />
+                            <span className="text-[13px] font-mono text-white leading-none">0</span>
+                        </div>
+
+                        <div className="w-3 h-3 flex items-center justify-center">
+                            <Layers className="w-3 h-3 text-cyan-400" />
+                        </div>
+                    </div>
+
+                    <div className="w-[1px] h-3 bg-white/10 mx-0.5"></div>
+
+                    <div className="flex items-center gap-2 px-2 text-[13px] ">
+                        <button className="text-[#526FFF] hover:text-[#6683FF] transition-colors leading-none">P1</button>
+                        <button className="text-text-tertiary hover:text-white transition-colors leading-none">P2</button>
+                        <button className="text-text-tertiary hover:text-white transition-colors leading-none">P3</button>
+                    </div>
+
                 </div>
-                <div className="p-1.5 hover:bg-white/5 rounded cursor-pointer transition-colors">
-                    <SlidersHorizontal className="w-3 h-3 text-text-tertiary" />
-                </div>
+
+                <button className="text-text-tertiary hover:text-white transition-colors ml-1">
+                    <SlidersHorizontal size={14} />
+                </button>
+
             </div>
         </div>
     );
