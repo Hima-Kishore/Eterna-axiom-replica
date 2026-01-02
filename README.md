@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Axiom Pulse - High-Frequency Token Dashboard
 
-## Getting Started
+A pixel-perfect, real-time cryptocurrency dashboard simulating high-frequency trading updates. Built with **Next.js 14**, **Redux Toolkit**, and **Atomic Design**.
 
-First, run the development server:
+![Dashboard Preview](./screenshot.png) 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ⚡ Performance & Architecture
+* **Real-Time Simulation:** Custom `useTokenSocket` hook delivering updates <100ms.
+* **State Management:** Redux Toolkit (`pulseSlice`) preventing prop-drilling and managing complex data streams.
+* **Render Optimization:** `React.memo` implemented on `TokenCard` to prevent "render avalanches" during high-frequency updates.
+* **Atomic Design:** Strict separation of concerns:
+    * **Atoms:** `TokenBadge`, `TokenIdentity`, `TabButton`
+    * **Molecules:** `TokenCard`, `BondingCard`, `MobileNavbar`
+    * **Organisms:** `PulseColumn`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎨 Interaction & Visuals
+* **Trend-Aware UI:** "Bonding Curve" popover that detects price direction (Green/Red) in real-time.
+* **Micro-Interactions:** Custom CSS `sweep-effect` animations for price updates.
+* **Responsive Layout:** Mobile-first Tab Switcher transitioning to a 3-column grid on desktop.
+* **Radix UI Primitives:** Accessible Dialogs (Buy Modal) and Hover Cards (Bonding Popover).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠 Tech Stack
 
-## Learn More
+* **Framework:** Next.js 14 (App Router)
+* **Styling:** Tailwind CSS + Radix UI
+* **State:** Redux Toolkit
+* **Icons:** Lucide React
+* **Language:** TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+## 🏃‍♂️ Running Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  **Install dependencies:**
+    ```bash
+    npm install --legacy-peer-deps
+    ```
+2.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+3.  **Open:** [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🧠 Design Decisions
+* **Why Atomic Design?** To handle the complexity of the `TokenCard`, I decomposed it into atoms (`TokenIdentity`, `TokenBadge`) to ensure reusability and cleaner maintainability.
+* **Why Redux?** Given the requirement for "high-frequency updates" across multiple isolated lists, Redux offered a more performant and predictable state container than React Context.
