@@ -5,7 +5,7 @@ export const TokenMetricsBottom = ({ txCount }: { txCount: number }) => {
         <div className="flex items-center justify-end gap-1.5 w-full my-1">
            <div className="flex items-center gap-0.5">
               <span className="text-[10px] text-text-tertiary font-bold">F</span>
-              <img src="images/solanaIcon.png" alt="" className="w-2 h-2 opacity-70 hidden" />
+              <img src="images/solanaIcon.svg" alt="" className="w-2 h-2 opacity-70 hidden" />
               <Zap className="w-2 h-2 text-text-tertiary" /> 
               <span className="text-[10px] text-text-tertiary">0.036</span>
            </div>

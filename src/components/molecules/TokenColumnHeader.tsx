@@ -19,7 +19,7 @@ export const TokenColumnHeader = ({ title }: { title: string }) => {
                         </div>
 
                         <div className="w-3 h-3 flex items-center justify-center">
-                            <Layers className="w-3 h-3 text-cyan-400" />
+                            <img src="images/solanaIcon.svg" alt="sol" className="w-3 h-3 text-cyan-400" />
                         </div>
                     </div>
 
