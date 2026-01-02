@@ -4,7 +4,7 @@ import {
   Bookmark, 
   Keyboard, 
   Volume2, 
-  Target, 
+  Crosshair, 
   Wallet,
   Box
 } from "lucide-react";
@@ -47,7 +47,7 @@ export const PulseHeader = () => {
                         <Volume2 size={18} />
                     </button>
                     <button className="p-2 text-white hover:text-white transition-colors">
-                        <Target size={18} />
+                        <Crosshair size={18} />
                     </button>
                 </div>
 

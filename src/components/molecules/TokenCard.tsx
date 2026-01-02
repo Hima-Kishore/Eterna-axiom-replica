@@ -53,7 +53,7 @@ export const TokenCard = memo(({
   return (
     <BondingCard marketCap={marketCap}>
       <div className={cn(
-        "sweep-effect", flashClass, "flex gap-3 px-2 py-3 border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full"
+        "sweep-effect", flashClass, "flex gap-2 px-2 py-2.5 border-b border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full"
       )}>
         
         <div className="relative z-10 flex gap-3 w-full">

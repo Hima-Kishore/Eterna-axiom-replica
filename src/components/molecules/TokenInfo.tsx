@@ -16,7 +16,7 @@ interface TokenInfoProps {
 
 export const TokenInfo = ({ name, symbol, timeAgo, badges }: TokenInfoProps) => {
     return (
-        <div className="flex-1 min-w-0 flex flex-col gap-1">
+        <div className="flex-1 min-w-0 flex flex-col gap-0.5">
             <TokenIdentity symbol={symbol} name={name} />
 
             <TokenSocials timeAgo={timeAgo} />

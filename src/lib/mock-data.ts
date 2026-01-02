@@ -25,8 +25,8 @@ export const generateToken = (id: string): TokenData => {
     statusColor: isGain ? "border-status-increase" : "border-status-decrease",
     badges: [
       { type: isGain ? "increase" : "decrease", label: `${getRandomInt(10, 90)}%` },
-      { type: "neutral", label: "Audit" },
-      { type: isGain ? "increase" : "decrease", label: "Vol" },
+      { type: "neutral", label: "0%" },
+      { type: isGain ? "increase" : "decrease", label: "1%" },
     ]
   };
 };

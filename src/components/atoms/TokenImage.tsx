@@ -10,7 +10,7 @@ interface TokenImageProps {
 export const TokenImage = ({ src, alt, borderColor = "border-card-border" }: TokenImageProps) => {
   return (
     <div className={cn(
-      "relative w-[78px] h-[78px] rounded-md overflow-hidden border shrink-0 p-0.5 bg-card", // Increased size to w-12/h-12
+      "relative w-[78px] h-[78px] rounded-md overflow-hidden border shrink-0 p-0.5 bg-card",
       borderColor
     )}>
       <img 
