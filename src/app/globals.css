@@ -26,11 +26,11 @@ body {
   background: #06070B; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #18181A; 
+  background: #454b58; 
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2A2A2E; 
+  background: rgb(106, 106, 118); 
 }
 
 @keyframes sweepAnimation {

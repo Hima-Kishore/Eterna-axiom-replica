@@ -17,7 +17,7 @@ export const PulseColumn = ({ title, tokens, className = "", onTokenBuy }: Pulse
       <TokenColumnHeader title={title} />
 
       {/* The Scrollable List */}
-      <div className="flex flex-col overflow-y-auto pb-20 scrollbar-thin">
+      <div className="flex-1 min-h-0 overflow-y-auto pb-20">
         {tokens.map((token) => (
           <TokenCard
             key={token.id}
