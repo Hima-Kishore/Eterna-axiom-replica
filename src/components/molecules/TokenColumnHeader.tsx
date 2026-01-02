@@ -4,7 +4,7 @@ import { SlidersHorizontal, Zap, Layers } from 'lucide-react';
 
 export const TokenColumnHeader = ({ title }: { title: string }) => {
     return (
-        <div className="flex items-center justify-between px-3 py-2 border-b border-white/5 shrink-0 bg-surface-dark z-10 h-14">
+        <div className="flex items-center justify-between px-3 border-b border-white/5 shrink-0 bg-surface-dark z-10 h-12">
 
             <h2 className="text-[16px] font-[500] text-white">{title}</h2>
 
@@ -12,8 +12,8 @@ export const TokenColumnHeader = ({ title }: { title: string }) => {
 
                 <div className="flex items-center bg-[#0b0c12] rounded-full border border-white/10 h-6 py-1">
 
-                    <div className="flex items-center justify-between gap-6 px-2">
-                        <div className="flex items-center gap-1">
+                    <div className="flex items-center justify-between gap-8 px-2">
+                        <div className="flex items-center gap-2">
                             <Zap className="w-3 h-3 text-text-tertiary fill-current" />
                             <span className="text-[13px] font-mono text-white leading-none">0</span>
                         </div>
@@ -23,7 +23,7 @@ export const TokenColumnHeader = ({ title }: { title: string }) => {
                         </div>
                     </div>
 
-                    <div className="w-[1px] h-3 bg-white/10 mx-0.5"></div>
+                    <div className="w-[1px] h-6 bg-white/10"></div>
 
                     <div className="flex items-center gap-2 px-2 text-[13px] ">
                         <button className="text-[#526FFF] hover:text-[#6683FF] transition-colors leading-none">P1</button>

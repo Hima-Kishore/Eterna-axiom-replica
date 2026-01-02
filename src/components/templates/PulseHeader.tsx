@@ -13,9 +13,9 @@ export const PulseHeader = () => {
     return (
         <>
             <div className="flex items-center gap-4">
-                <h1 className="font-bold text-xl text-text-primary tracking-tight">Pulse</h1>
+                <h1 className="font-md text-xl text-text-primary tracking-tight">Pulse</h1>
                 
-                <div className="flex items-center gap-2 border-l border-white/10 pl-4">
+                <div className="flex items-center gap-2">
                     <div className="w-9 h-9 rounded-full bg-cyan-500/10 flex items-center justify-center">
                         <img src="/images/solanaIcon.svg" alt="" className="w-6 h-6 text-cyan-400 fill-cyan-400" />
                     </div>
