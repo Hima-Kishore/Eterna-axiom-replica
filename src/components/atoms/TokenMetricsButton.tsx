@@ -19,7 +19,7 @@ export const TokenMetricsButton = ({ buyAmount, onBuy }: TokenMetricsButtonProps
                 
                 "text-black text-[11px] font-extrabold tracking-wide",
                 
-                "py-1.5",
+                "py-1",
 
                 "shadow-[0_2px_8px_rgba(82,111,255,0.25)] hover:shadow-[0_4px_12px_rgba(102,131,255,0.4)]",
                 
@@ -27,7 +27,7 @@ export const TokenMetricsButton = ({ buyAmount, onBuy }: TokenMetricsButtonProps
             )}
         >
 
-            <Zap className="w-3 h-3 fill-black text-black" />
+            <Zap className="w-3 h-4 fill-black text-black" />
             {buyAmount}
             
        </button>

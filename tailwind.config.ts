@@ -43,7 +43,7 @@ const config: Config = {
       },
       fontFamily: {
         // We will stick to the default sans for now, or add Inter later
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['var(--font-ibm-plex-sans)', 'var(--font-inter)', 'sans-serif'],
       },
       fontSize: {
         // Custom tiny font sizes for the "Audit" icons seen in screenshot

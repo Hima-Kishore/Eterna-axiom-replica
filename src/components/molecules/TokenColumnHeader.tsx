@@ -18,8 +18,8 @@ export const TokenColumnHeader = ({ title }: { title: string }) => {
                             <span className="text-[13px] font-mono text-white leading-none">0</span>
                         </div>
 
-                        <div className="w-3 h-3 flex items-center justify-center">
-                            <img src="images/solanaIcon.svg" alt="sol" className="w-3 h-3 text-cyan-400" />
+                        <div className="w-3.5 h-3.5 flex items-center justify-center">
+                            <img src="images/solanaIcon.svg" alt="sol" className="w-3.5 h-3.5 text-cyan-400" />
                         </div>
                     </div>
 
