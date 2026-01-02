@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 export type BadgeVariant = "increase" | "decrease" | "neutral";
 
+export type Tab = "newPairs" | "finalStretch" | "migrated";
+
 export interface TokenBadgeData {
   type: BadgeVariant;
   label: string;
