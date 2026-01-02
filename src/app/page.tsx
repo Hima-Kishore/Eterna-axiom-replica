@@ -1,16 +1,24 @@
-import { PulseDashboard } from "@/components/templates/PulseDashboard";
+import { Navbar } from "@/components/templates/Navbar";
+import { NavbarExtension } from "@/components/templates/NavbarExtension";
 import { PulseHeader } from "@/components/templates/PulseHeader";
+import { PulseDashboard } from "@/components/templates/PulseDashboard";
 
 export default function Home() {
   return (
-    <main className="h-screen bg-background text-white flex flex-col overflow-hidden font-sans selection:bg-brand-primary/30 fixed inset-0 px-6">
+    <main className="h-screen bg-background text-white flex flex-col overflow-hidden font-sans selection:bg-brand-primary/30 fixed inset-0">
+      
+      {/* Navbar */}
+      <Navbar />
+      <NavbarExtension />
+
       {/* Header */}
-      <header className="h-14 flex items-center justify-between px-1 shrink-0 bg-background z-20">
+      <header className="h-14 flex items-center justify-between px-1 shrink-0 bg-background z-20 px-6">
         <PulseHeader />
       </header>
 
       {/* Dashboard */}
       <PulseDashboard />
+
     </main>
   );
 }

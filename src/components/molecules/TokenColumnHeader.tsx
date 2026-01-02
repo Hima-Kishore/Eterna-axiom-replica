@@ -4,13 +4,13 @@ import { SlidersHorizontal, Zap, Layers } from 'lucide-react';
 
 export const TokenColumnHeader = ({ title }: { title: string }) => {
     return (
-        <div className="flex items-center justify-between px-3 py-2 border-b border-white/5 shrink-0 bg-background z-10 h-14">
+        <div className="flex items-center justify-between px-3 py-2 border-b border-white/5 shrink-0 bg-surface-dark z-10 h-14">
 
-            <h2 className="text-[18px] font-[500] text-white">{title}</h2>
+            <h2 className="text-[16px] font-[500] text-white">{title}</h2>
 
             <div className="flex items-center gap-4">
 
-                <div className="flex items-center bg-[#0b0c12] rounded-full border border-white/10 h-8 px-1 ">
+                <div className="flex items-center bg-[#0b0c12] rounded-full border border-white/10 h-6 py-1">
 
                     <div className="flex items-center justify-between gap-6 px-2">
                         <div className="flex items-center gap-1">
