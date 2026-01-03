@@ -36,9 +36,11 @@ export const TokenCard = memo(({
       const newVal = parseFloat(marketCap.replace(/[^0-9.]/g, ""));
 
       if (newVal > oldVal) {
-        setFlashClass("sweep-green"); 
+        setFlashClass("sweep-green");
+        statusColor="border-status-increase";
       } else if (newVal < oldVal) {
         setFlashClass("sweep-red");
+        statusColor="border-status-decrease";
       }
 
       const timer = setTimeout(() => {

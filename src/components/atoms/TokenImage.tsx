@@ -7,7 +7,7 @@ interface TokenImageProps {
   borderColor?: string;
 }
 
-export const TokenImage = ({ src, alt, borderColor = "border-status-decrease" }: TokenImageProps) => {
+export const TokenImage = ({ src, alt, borderColor = "border-brand-primary" }: TokenImageProps) => {
   return (
     <div className={cn(
       "relative w-[78px] h-[78px] rounded-md overflow-hidden border shrink-0 p-0.5 bg-card",

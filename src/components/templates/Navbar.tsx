@@ -21,12 +21,12 @@ export const Navbar = () => {
          
          <SearchBar />
 
-         <button className="hidden md:flex items-center gap-2 bg-[#14151a] border border-white/5 rounded-full px-2 py-1.5 text-xs w-full font-bold hover:bg-white/5 transition-colors">
+         <button className="hidden md:flex items-center gap-2 bg-[#14151a] border border-white/5 rounded-full px-2 py-1.5 text-xs font-bold hover:bg-white/5 shrink-0 transition-colors">
             <img src="/images/solanaIcon.svg" alt="" className="text-brand-primary" />
             <span>SOL</span>
-            <span className="text-[10px] text-white">
-              <ChevronDown size={18} className="font-bold"/>
-            </span>
+            <div>
+              <ChevronDown size={18} className="text-[10px] text-white font-bold"/>
+            </div>
          </button>
 
          <button className="bg-[#526FFF] hover:bg-[#425ADD] text-black text-[14px] font-bold px-4 py-1.5 rounded-full transition-colors flex items-center gap-2">

@@ -9,45 +9,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // The Main Page Background (#06070B)
         background: "#06070B",
         "surface-dark": "#101114",
         
-        // Card Backgrounds (Derived from bg-secondary & tertiary)
         card: {
-          DEFAULT: "#101114", // --background-secondary
-          hover: "#18181A",   // --background-tertiary
-          border: "#1f1f23",  // --border-subtle (approx)
+          DEFAULT: "#101114",
+          hover: "#18181A",
+          border: "#1f1f23",
         },
 
-        // Text Colors
         text: {
-          primary: "#FCFCFC",   // --text-primary (White)
-          secondary: "#C8C9D1", // --text-secondary (Light Gray)
-          tertiary: "#777A8C",  // --text-tertiary (Dark Gray/Muted)
+          primary: "#FCFCFC",
+          secondary: "#C8C9D1",
+          tertiary: "#777A8C",
         },
 
-        // Brand Colors
         brand: {
           primary: "#526FFF", 
           primaryHover: "#6683FF", 
         },
 
-        // Status Colors (The "Pulse" Indicators)
         status: {
-          increase: "#22C55E",      // --increase (Green)
-          increaseHover: "#5BE7BD", // --increase-hover
-          decrease: "#EF4444",      // --decrease (Red)
-          decreaseHover: "#F8649A", // --decrease-hover
+          increase: "#22C55E",
+          increaseHover: "#5BE7BD",
+          decrease: "#EF4444",
+          decreaseHover: "#F8649A",
         }
       },
       fontFamily: {
-        // We will stick to the default sans for now, or add Inter later
         sans: ['var(--font-ibm-plex-sans)', 'var(--font-inter)', 'sans-serif'],
       },
       fontSize: {
-        // Custom tiny font sizes for the "Audit" icons seen in screenshot
-        xxs: '0.625rem', // 10px
+        xxs: '0.625rem',
       }
     },
   },
