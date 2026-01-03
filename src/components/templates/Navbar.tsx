@@ -1,5 +1,5 @@
 import React from "react";
-import { UserCircle, ChevronDown } from "lucide-react";
+import { UserCircle, ChevronDown, Menu, Search, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BrandLogo } from "@/components/atoms/BrandLogo";
 import { NavbarList } from "@/components/molecules/NavbarList";
@@ -10,14 +10,14 @@ import { BellIcon } from "@/components/atoms/BellIcon";
 
 export const Navbar = () => {
   return (
-    <nav className="h-16 border-b-2 border-white/5 bg-background flex items-center justify-between px-4 shrink-0 z-50">
+    <nav className="sm:h-16 border-b-2 border-white/5 bg-background flex items-center justify-between pr-1 sm:px-4 py-1 sm:py-0 mb-2 sm:mb-0 shrink-0 z-50">
       <div className="flex items-center gap-6">
         <BrandLogo />
 
         <NavbarList />
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-1 sm:gap-3">
          
          <SearchBar />
 
@@ -29,19 +29,36 @@ export const Navbar = () => {
             </div>
          </button>
 
-         <button className="bg-[#526FFF] hover:bg-[#425ADD] text-black text-[14px] font-bold px-4 py-1.5 rounded-full transition-colors flex items-center gap-2">
+         <button className="hidden sm:flex bg-[#526FFF] hover:bg-[#425ADD] text-black text-[14px] font-bold px-4 py-1.5 rounded-full transition-colors items-center gap-2">
             Deposit
          </button>
 
-         <StarIcon />
+         <div className="hidden sm:flex">
+            <StarIcon />
+         </div>
 
-         <BellIcon />
+         <div className="hidden sm:flex">
+          <BellIcon />
+         </div>
 
          <WalletDetails />
+
+         <div className="flex gap-2 sm:hidden bg-[#1A1D24] border border-white/5 rounded-full p-2">
+            <Copy size={16} />
+            <span className="text-xs">Paste CA</span>
+         </div>
+
+         <div className="block sm:hidden bg-[#1A1D24] border border-white/5 rounded-full p-2">
+            <Search size={16} />
+         </div>
 
          <button className="p-2 text-white bg-[#1A1D24] rounded-full transition-colors">
             <UserCircle size={20} />
          </button>
+
+         <div className="p-2 block sm:hidden bg-[#1A1D24] rounded-full">
+            <Menu size={20} />
+         </div>
       </div>
     </nav>
   );

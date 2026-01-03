@@ -10,7 +10,9 @@ export default function Home() {
       
       {/* Navbar */}
       <Navbar />
-      <NavbarExtension />
+      <div className="hidden sm:block">
+        <NavbarExtension />
+      </div>
 
       {/* Header */}
       <header className="h-14 hidden sm:flex items-center justify-between px-1 shrink-0 bg-background z-20 px-6">
