@@ -2,6 +2,7 @@ import { Navbar } from "@/components/templates/Navbar";
 import { NavbarExtension } from "@/components/templates/NavbarExtension";
 import { PulseHeader } from "@/components/templates/PulseHeader";
 import { PulseDashboard } from "@/components/templates/PulseDashboard";
+import { Footer } from '@/components/templates/Footer';
 
 export default function Home() {
   return (
@@ -17,7 +18,12 @@ export default function Home() {
       </header>
 
       {/* Dashboard */}
-      <PulseDashboard />
+      <div className="flex-1 min-h-0 flex flex-col relative"> 
+        <PulseDashboard />
+      </div>
+
+      {/* Footer */}
+      <Footer />
 
     </main>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { UserCircle } from "lucide-react";
+import { UserCircle, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BrandLogo } from "@/components/atoms/BrandLogo";
 import { NavbarList } from "@/components/molecules/NavbarList";
@@ -24,7 +24,9 @@ export const Navbar = () => {
          <button className="hidden md:flex items-center gap-2 bg-[#14151a] border border-white/5 rounded-full px-2 py-1.5 text-xs w-full font-bold hover:bg-white/5 transition-colors">
             <img src="/images/solanaIcon.svg" alt="" className="text-brand-primary" />
             <span>SOL</span>
-            <span className="text-[10px] text-white">▼</span>
+            <span className="text-[10px] text-white">
+              <ChevronDown size={18} className="font-bold"/>
+            </span>
          </button>
 
          <button className="bg-[#526FFF] hover:bg-[#425ADD] text-black text-[14px] font-bold px-4 py-1.5 rounded-full transition-colors flex items-center gap-2">

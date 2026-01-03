@@ -6,7 +6,8 @@ import {
   Volume2, 
   Crosshair, 
   Wallet,
-  Box
+  Box,
+  ChevronDown
 } from "lucide-react";
 
 export const PulseHeader = () => {
@@ -58,6 +59,7 @@ export const PulseHeader = () => {
                         <span className="text-xs font-mono"> 1 </span>
                         <img src="/images/solanaIcon.svg" alt="" className="w-3.5 h-3.5"/>
                         <span className="text-xs font-mono">0</span>
+                        <ChevronDown size={16}/>
                     </div>
                 </button>
             </div>
