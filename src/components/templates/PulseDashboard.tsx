@@ -40,7 +40,7 @@ export const PulseDashboard = () => {
 
 
   return (
-    <div className="flex-1 flex flex-col overflow-hidden relative px-6">
+    <div className="flex-1 flex flex-col overflow-hidden relative px-1.5 sm:px-6">
       
       {/* MOBILE HEADER (Visible only on small screens) */}
       <MobileNavbar activeTab={activeTab} onTabChange={setActiveTab}/>

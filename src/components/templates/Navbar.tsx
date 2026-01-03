@@ -10,18 +10,18 @@ import { BellIcon } from "@/components/atoms/BellIcon";
 
 export const Navbar = () => {
   return (
-    <nav className="sm:h-16 border-b-2 border-white/5 bg-background flex items-center justify-between pr-1 sm:px-4 py-1 sm:py-0 mb-2 sm:mb-0 shrink-0 z-50">
+    <nav className="sm:h-16 border-b-2 border-white/5 bg-background flex items-center justify-between pr-1 sm:px-4 py-1.5 sm:py-0 mb-2 sm:mb-0 shrink-0 z-50">
       <div className="flex items-center gap-6">
         <BrandLogo />
 
         <NavbarList />
       </div>
 
-      <div className="flex items-center gap-1 sm:gap-3">
+      <div className="flex items-center gap-1 sm:gap-3 absolute right-2">
          
          <SearchBar />
 
-         <button className="hidden md:flex items-center gap-2 bg-[#14151a] border border-white/5 rounded-full px-2 py-1.5 text-xs font-bold hover:bg-white/5 shrink-0 transition-colors">
+         <button className="hidden sm:flex items-center gap-2 bg-[#14151a] border border-white/5 rounded-full px-2 py-1.5 text-xs font-bold hover:bg-white/5 shrink-0 transition-colors">
             <img src="/images/solanaIcon.svg" alt="" className="text-brand-primary" />
             <span>SOL</span>
             <div>

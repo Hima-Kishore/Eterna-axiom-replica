@@ -118,7 +118,7 @@ export const Footer = () => {
                 </div>
             </div>
 
-            <div className="h-14 flex justify-around items-center px-4 mt-1 md:hidden">
+            <div className="h-14 flex justify-around items-center px-3 mt-1 md:hidden">
                 <div className="flex flex-col items-center gap-1 text-white/50">
                     <Flame size={18}/>
                     <span className="text-xs font-small">Trending</span>
@@ -132,7 +132,7 @@ export const Footer = () => {
                     <span className="text-xs font-small">Pulse</span>
                 </div>
                 <div className="flex flex-col items-center gap-1 text-white/50">
-                    <ArrowRightLeft size={16} className="border px-1 py-1 rounded-full"/>
+                    <ArrowRightLeft size={16} className="border border-white/50 px-1 py-1 rounded-full"/>
                     <span className="text-xs font-small">Perpetuals</span>
                 </div>
                 <div className="flex flex-col items-center gap-1 text-white/50">
