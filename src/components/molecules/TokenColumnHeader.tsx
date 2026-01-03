@@ -4,7 +4,7 @@ import { SlidersHorizontal, Zap, Layers } from 'lucide-react';
 
 export const TokenColumnHeader = ({ title }: { title: string }) => {
     return (
-        <div className="flex items-center justify-between px-3 border-b border-white/5 shrink-0 bg-surface-dark z-10 h-12">
+        <div className="hidden md:flex items-center justify-between px-3 border-b border-white/5 shrink-0 bg-surface-dark z-10 h-12">
 
             <h2 className="text-[16px] font-[500] text-white">{title}</h2>
 

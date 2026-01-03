@@ -12,7 +12,7 @@ interface PulseColumnProps {
 
 export const PulseColumn = ({ title, tokens, className = "", onTokenBuy }: PulseColumnProps) => {
   return (
-    <div className={`flex flex-col h-full min-w-[320px] lg:min-w-[400px] flex-1 border-r-2 border-white/5 last:border-r-0 bg-surface-dark ${className}`}>
+    <div className={`flex flex-col h-full min-w-[260px] flex-1 border-r-2 border-white/5 last:border-r-0 bg-surface-dark ${className}`}>
       {/* Column Header */}
       <TokenColumnHeader title={title} />
 

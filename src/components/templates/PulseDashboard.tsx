@@ -53,7 +53,7 @@ export const PulseDashboard = () => {
             title="Final Stretch" 
             tokens={finalStretch} 
             className={cn(
-                "hidden md:flex",
+                "hidden lg:flex shrink-1",
                 activeTab === "finalStretch" && "flex"
             )}
             onTokenBuy={handleBuy}
@@ -65,7 +65,7 @@ export const PulseDashboard = () => {
             tokens={newPairs} 
             className={cn(
                 "flex",
-                activeTab !== "newPairs" && "hidden md:flex"
+                activeTab !== "newPairs" && "hidden lg:flex shrink-1"
             )}
             onTokenBuy={handleBuy}
           />
@@ -76,7 +76,7 @@ export const PulseDashboard = () => {
             title="Migrated" 
             tokens={migrated} 
             className={cn(
-                "hidden md:flex", 
+                "hidden lg:flex shrink-1", 
                 activeTab === "migrated" && "flex"
             )}
             onTokenBuy={handleBuy}
