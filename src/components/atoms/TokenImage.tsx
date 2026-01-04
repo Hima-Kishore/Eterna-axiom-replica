@@ -14,7 +14,7 @@ export const TokenImage = ({ src, alt, borderColor = "border-brand-primary" }: T
       borderColor
     )}>
       <img 
-        src={src || "images/GoogleLogo.webp"} 
+        src={src || "images/googleLogo.webp"} 
         alt={alt}
         className="w-full h-full object-cover rounded-md"
       />
