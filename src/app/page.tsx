@@ -6,7 +6,7 @@ import { Footer } from '@/components/templates/Footer';
 
 export default function Home() {
   return (
-    <main className="h-screen bg-background text-white flex flex-col overflow-hidden font-sans selection:bg-brand-primary/30 fixed inset-0">
+    <main className="h-dvh bg-background text-white flex flex-col overflow-hidden font-sans selection:bg-brand-primary/30 fixed inset-0">
       
       {/* Navbar */}
       <Navbar />
@@ -25,7 +25,9 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <Footer />
+      <div className="z-50">
+        <Footer />
+      </div>
 
     </main>
   );

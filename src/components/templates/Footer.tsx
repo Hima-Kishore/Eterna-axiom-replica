@@ -118,7 +118,7 @@ export const Footer = () => {
                 </div>
             </div>
 
-            <div className="h-14 flex justify-around items-center px-3 mt-1 md:hidden">
+            <div className="h-14 pb-safe flex justify-around items-center px-3 mt-1 md:hidden">
                 <div className="flex flex-col items-center gap-1 text-white/50">
                     <Flame size={18}/>
                     <span className="text-xs font-small">Trending</span>
