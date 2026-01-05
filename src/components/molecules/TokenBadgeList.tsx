@@ -10,7 +10,7 @@ interface TokenInfoProps {
 
 export const TokenBadgeList = ({ badges }: TokenInfoProps) => {
     return (
-        <div className="flex flex-wrap gap-1.5 mt-auto mb-2 pt-1">
+        <div className="flex gap-1.5 pt-1">
             {badges.map((badge, i) => (
                 <TokenBadge 
                     key={i} 

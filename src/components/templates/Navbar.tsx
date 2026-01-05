@@ -17,8 +17,9 @@ export const Navbar = () => {
         <NavbarList />
       </div>
 
-      <div className="flex items-center gap-1 sm:gap-3 absolute right-2">
-         
+      <div className="flex items-center gap-1 sm:gap-3 absolute pl-12 right-2">
+         <div className="absolute left-0 top-0 w-12 h-full z-5 bg-gradient-to-l from-background to-transparent"></div>
+         <div className="bg-background flex items-center gap-1 sm:gap-3 ">
          <SearchBar />
 
          <button className="hidden sm:flex items-center gap-2 bg-[#14151a] border border-white/5 rounded-full px-2 py-1.5 text-xs font-bold hover:bg-white/5 shrink-0 transition-colors">
@@ -58,6 +59,7 @@ export const Navbar = () => {
 
          <div className="p-2 block sm:hidden bg-[#1A1D24] rounded-full">
             <Menu size={20} />
+         </div>
          </div>
       </div>
     </nav>

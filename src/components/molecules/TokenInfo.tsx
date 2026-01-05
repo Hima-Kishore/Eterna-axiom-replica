@@ -21,7 +21,9 @@ export const TokenInfo = ({ name, symbol, timeAgo, badges }: TokenInfoProps) => 
 
             <TokenSocials timeAgo={timeAgo} />
 
-            <TokenBadgeList badges={badges} />
+            <div className="flex lg:hidden xl:flex mt-auto mb-2">
+              <TokenBadgeList badges={badges} />
+            </div>
         </div>
     );
 };

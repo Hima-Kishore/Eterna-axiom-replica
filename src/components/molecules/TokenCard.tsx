@@ -60,7 +60,7 @@ export const TokenCard = memo(({
         
         <div className="relative z-10 flex gap-3 w-full">
             {/* SECTION 1: Left (Image) */}
-            <TokenLogo name={name} statusColor={statusColor}/>
+            <TokenLogo name={name} statusColor={statusColor} badges={badges}/>
 
             {/* SECTION 2: Center (Info) */}
             <TokenInfo name={name} symbol={symbol} timeAgo={timeAgo} badges={badges} />
