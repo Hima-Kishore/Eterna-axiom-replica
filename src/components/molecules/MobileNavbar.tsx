@@ -11,8 +11,8 @@ interface MobileNavbarProps {
 export const MobileNavbar = ({ activeTab, onTabChange }: MobileNavbarProps) => {
 
   return (
-    <div className="flex lg:hidden flex items-center justify-start gap-4 pb-4 px-2 bg-background shrink-0">
-      <div className="flex sm:hidden items-center gap-2">
+    <div className="flex lg:hidden flex items-center justify-start gap-2 sm:gap-4 pb-4 px-2 bg-background shrink-0">
+      <div className="flex sm:hidden items-center gap-1 sm:gap-2">
         <div className="w-9 h-9 rounded-full bg-cyan-500/10 flex items-center justify-center">
           <img src="/images/solanaIcon.svg" alt="" className="w-6 h-6 text-cyan-400 fill-cyan-400" />
         </div>

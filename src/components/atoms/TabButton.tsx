@@ -15,10 +15,10 @@ export const TabButton = ({ id, label, isActive, onClick }: TabButtonProps) => {
         <button
             onClick={() => onClick(id)}
             className={cn(
-            "px-4 py-1.5 rounded-full text-xs font-bold transition-all",
+            "py-1.5 rounded-full text-xs font-bold transition-all",
             isActive
-                ? "bg-[#25282F] text-white"
-                : "text-text-tertiary hover:text-white"
+                ? "bg-[#25282F] text-white px-4"
+                : "text-text-tertiary hover:text-white px-2"
             )}
         >
             {label}

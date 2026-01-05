@@ -44,20 +44,20 @@ export const Navbar = () => {
 
          <WalletDetails />
 
-         <div className="flex gap-2 sm:hidden bg-[#1A1D24] border border-white/5 rounded-full p-2">
+         <div className="flex gap-2 sm:hidden bg-[#1A1D24] border border-white/5 rounded-full p-1.5 sm:p-2 shrink-0">
             <Copy size={16} />
             <span className="text-xs">Paste CA</span>
          </div>
 
-         <div className="block sm:hidden bg-[#1A1D24] border border-white/5 rounded-full p-2">
+         <div className="block sm:hidden bg-[#1A1D24] border border-white/5 rounded-full p-1.5 sm:p-2">
             <Search size={16} />
          </div>
 
-         <button className="p-2 text-white bg-[#1A1D24] rounded-full transition-colors">
+         <button className="p-1.5 sm:p-2 text-white bg-[#1A1D24] rounded-full transition-colors">
             <UserCircle size={20} />
          </button>
 
-         <div className="p-2 block sm:hidden bg-[#1A1D24] rounded-full">
+         <div className="p-1.5 sm:p-2 block sm:hidden bg-[#1A1D24] rounded-full">
             <Menu size={20} />
          </div>
          </div>
