@@ -3,6 +3,7 @@
 A pixel-perfect, real-time cryptocurrency dashboard simulating high-frequency trading updates. Built with **Next.js 14**, **Redux Toolkit**, and **Atomic Design**.
 
 ![Dashboard Preview](./screenshot.png) 
+![Mobile Version](./screenshot2.png)
 
 ## 🚀 Key Features
 
