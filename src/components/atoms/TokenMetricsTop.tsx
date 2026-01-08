@@ -29,8 +29,8 @@ export const TokenMetricsTop = ({ marketCap, volume }: TokenMetricsTopProps) => 
     return (
         <div className="text-right flex flex-col gap-0.5">
           <div className="flex items-center justify-end gap-1">
-            <span className="text-text-tertiary text-[10px] font-medium uppercase tracking-wide">MC</span>
-            <span className={cn("font-bold", mcColorClass)}>{marketCap}</span>
+            <span className="text-text-tertiary text-[12px] font-medium uppercase tracking-wide">MC<span className={cn("font-[500] text-[16px] ml-1", mcColorClass)}>{marketCap}</span></span>
+            
           </div>
           <div className="flex items-center justify-end gap-1">
              <span className="text-text-tertiary text-[10px] font-medium">V</span>

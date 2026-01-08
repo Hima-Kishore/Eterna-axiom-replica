@@ -26,7 +26,7 @@ export const TokenLogo = ({ name, statusColor, badges }: TokenLogoProps) => {
             </div>
         </div>
         <span className="text-xxs text-text-tertiary truncate max-w-[78px] text-center">CjcT...hHFv</span>
-        <div className="hidden lg:block xl:hidden left-1 ml-auto">
+        <div className="block sm:hidden lg:block xl:hidden left-1 ml-auto">
           <TokenBadgeList badges={badges}/>
         </div>
       </div>
