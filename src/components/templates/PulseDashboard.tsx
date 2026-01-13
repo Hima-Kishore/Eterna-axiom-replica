@@ -10,6 +10,7 @@ import { useTokenSocket } from "@/hooks/useTokenSocket";
 import { initializeMockData } from "@/lib/features/pulseSlice";
 import { cn } from "@/lib/utils";
 import { TokenData, Tab } from "@/types";
+import { SkeletonCard } from "../atoms/SkeletonCard";
 
 export const PulseDashboard = () => {
   const dispatch = useDispatch();
@@ -33,8 +34,31 @@ export const PulseDashboard = () => {
     dispatch(initializeMockData());
   }, [dispatch]);
 
+  // if (!isInitialized) {
+  //   return <div className="px-1 py-4 text-text-tertiary">Initializing Exchange...</div>;
+  // }
+
   if (!isInitialized) {
-    return <div className="px-1 py-4 text-text-tertiary">Initializing Exchange...</div>;
+    return (
+      <div className="flex flex-col lg:flex-row h-full overflow-hidden bg-surface-dark mx-6">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="flex flex-col h-full min-w-[320px] lg:min-w-[400px] flex-1 border-r border-white/5 last:border-r-0">
+            
+            <div className="flex items-center justify-between gap-6 px-3 py-6 border-b border-white/5 h-10">
+               <div className="h-6 w-24 bg-white/20 rounded-md animate-pulse" />
+               <div className="h-5 w-[152px] bg-white/15 rounded-full animate-pulse ml-auto" />
+               <div className="h-4 w-4 bg-white/10 rounded animate-pulse" />
+            </div>
+
+            <div className="flex-1 overflow-hidden">
+               {Array.from({ length: 12 }).map((_, idx) => (
+                  <SkeletonCard key={idx} />
+               ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   }
 
 
